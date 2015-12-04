@@ -1,3 +1,7 @@
 class CoworkerSerializer < ActiveModel::Serializer
-  attributes :id, :email, :first_name, :last_name, :avatar_url
+  attributes :id, :email
+
+  attribute :first_name, key: 'first-name'
+  attribute :last_name, key: 'last-name'
+  attribute :avatar_url, key: 'avatar-url'
 end
