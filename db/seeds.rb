@@ -5,3 +5,13 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+[
+    %w(Irek Skrobiś i.skrobis@selleo.com http://selleo.com/wp-content/uploads/2014/04/is_headshot_selleo-1.jpg),
+    %w(Michał Czyż m.czyz@selleo.com http://selleo.com/wp-content/uploads/2014/03/mc_headshot.png),
+    %w(Tomek Noworyta t.noworyta@selleo.com http://selleo.com/wp-content/uploads/2014/04/is_headshot_selleo-1.jpg),
+    %w(Wojtek Ryrych w.ryrych@selleo.com http://selleo.com/wp-content/uploads/2014/03/wr_headshot.png),
+    %w(Tomasz Dudzik t.dudzik@selleo.com http://selleo.com/wp-content/uploads/2014/04/tommy-1.png)
+].each do |first_name, last_name, email, avatar_url|
+  Coworker.create(first_name: first_name, last_name: last_name, email: email, avatar_url: avatar_url)
+end
