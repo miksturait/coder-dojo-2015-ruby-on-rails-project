@@ -1,0 +1,17 @@
+default: &default
+  adapter:  postgresql
+  encoding: unicode
+  pool:     5
+  username: michalczyz
+
+development:
+  <<: *default
+  database: merit_money_api_dev
+
+test:
+  <<: *default
+  database: merit_money_api_test
+
+production:
+  <<: *default
+  database: merit_money_api_production
