@@ -22,6 +22,11 @@ gem 'rack-cors'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
+  gem 'rspec-rails', github: 'rspec/rspec-rails'
+  gem 'rspec-core', github: 'rspec/rspec-core'
+  gem 'rspec-support', github: 'rspec/rspec-support'
+  gem 'rspec-expectations', github: 'rspec/rspec-expectations'
+  gem 'rspec-mocks', github: 'rspec/rspec-mocks'
 end
 
 group :development do
