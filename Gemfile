@@ -10,8 +10,9 @@ gem 'arel', github: "rails/arel"
 gem 'rack', github: "rack/rack"
 
 gem 'pg'
-gem 'unicorn'
 
+gem 'puma'
+gem 'rails_12factor', group: :production
 
 # Use ActiveModelSerializers to serialize JSON responses
 gem 'active_model_serializers', '~> 0.10.0.rc2'
