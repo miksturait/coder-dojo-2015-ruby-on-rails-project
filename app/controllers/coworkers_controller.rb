@@ -3,7 +3,8 @@ class CoworkersController < ApplicationController
 
   # GET /coworkers
   def index
-    @coworkers = Coworker.all
+    @coworkers = Coworker.name_like(params[:name]).
+        order(first_name: order_direction, last_name: order_direction).all
     sleep(1)
     render json: @coworkers, include: params[:include]
   end
@@ -48,4 +49,8 @@ class CoworkersController < ApplicationController
     def coworker_params
       params.require(:coworker).permit(:email, :first_name, :last_name, :avatar_url)
     end
+
+  def order_direction
+    params[:order] || :asc
+  end
 end
