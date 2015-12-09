@@ -4,7 +4,7 @@ class CoworkersController < ApplicationController
   # GET /coworkers
   def index
     @coworkers = Coworker.all
-
+    sleep(1)
     render json: @coworkers, include: params[:include]
   end
 
