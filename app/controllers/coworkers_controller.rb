@@ -5,7 +5,6 @@ class CoworkersController < ApplicationController
   def index
     @coworkers = Coworker.name_like(params[:name]).
         order(first_name: order_direction, last_name: order_direction).all
-    sleep(1)
     render json: @coworkers, include: params[:include]
   end
 
